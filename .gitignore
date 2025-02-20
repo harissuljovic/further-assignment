@@ -1,2 +1,4 @@
 .idea/
 videos/*
+.DS_store
+__py
