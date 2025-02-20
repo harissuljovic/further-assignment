@@ -1,0 +1,16 @@
+{
+  "initial_message": "How can I help you today?",
+  "tour_message": "We would love to have you visit our community.",
+  "schedule_message": "When would you like to schedule your tour?",
+  "activities_message": "Please tell us if you would like to learn about any of the following activities, so we can better prepare for your tour.",
+  "date_time_message": "2/20/2025 at 9:00 AM",
+  "name_message": "What is your first and last name?",
+  "email_message": "What is your email address? We will use this to identify your request in our system.",
+  "phone_message": "What is your phone number?",
+  "tour_requested_message": "Your tour has been requested. Someone will be in touch shortly to confirm whether your requested date/time is available.",
+  "care_message": "What level of care are you interested in?",
+  "who_is_it_for": "Who is this for?",
+  "timeline_message": "What is your timeline",
+  "cell_phone_message": "What is your cell phone number?",
+  "out_of_budget_message": "Out of my budget"
+}

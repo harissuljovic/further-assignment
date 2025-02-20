@@ -1,0 +1,10 @@
+{
+  "careLevels": [
+    "Independent Living",
+    "Assisted Living",
+    "Memory Care",
+    "Respite Care",
+    "Not Sure",
+    "Other"
+  ]
+}
