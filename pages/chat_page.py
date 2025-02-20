@@ -6,7 +6,6 @@ class ChatPage(BasePage):
 
     def __init__(self, page: Page):
         super().__init__(page)
-        self.initial_message = "div.MessageBubble.light >> text=How can I help you today?"
         self.schedule_a_tour_btn = 'label:has-text("Schedule A Tour")'
         self.pricing_btn = 'label:has-text("Pricing")'
         self.option_btn = "label.option-button"
@@ -18,9 +17,11 @@ class ChatPage(BasePage):
         self.send_btn = page.locator('button[type="submit"].send-icon')
         self.out_of_my_budget_btn = page.locator('label.option-button.primary >> text="Out Of My Budget"')
         self.invalid_email_error = page.locator('button[type="submit"][form*="form-"][class*="disabled"]')
+        self.error_message_locator = page.locator('div.UserInput.floating.light.error >> .error-message')
 
-    def wait_for_initial_message(self):
-        self.page.wait_for_selector(self.initial_message, state="visible")
+    def wait_for_initial_message(self, expected_message: str):
+        initial_message_locator = self.page.locator(f"div.MessageBubble.light >> text={expected_message}")
+        expect(initial_message_locator).to_be_visible(timeout=10000)
 
     def click_schedule_tour(self):
         self.page.click(self.schedule_a_tour_btn)
@@ -88,9 +89,8 @@ class ChatPage(BasePage):
     def verify_out_of_my_budget_btn_visible(self):
         expect(self.out_of_my_budget_btn).to_be_visible(timeout=10000)
 
-    def verify_invalid_email_error_message(self, expected_message: str):
-        error_message_locator = self.page.locator('div.UserInput.floating.light.error >> .error-message')
-        expect(error_message_locator).to_have_text(expected_message, timeout=5000)
+    def verify_invalid_error_message(self, expected_message: str):
+        expect(self.error_message_locator).to_have_text(expected_message, timeout=5000)
 
 
 

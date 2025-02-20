@@ -1,5 +1,6 @@
 {
   "initial_message": "How can I help you today?",
+  "initial_message_personalised": "Welcome back! What can we help you with today,",
   "tour_message": "We would love to have you visit our community.",
   "schedule_message": "When would you like to schedule your tour?",
   "activities_message": "Please tell us if you would like to learn about any of the following activities, so we can better prepare for your tour.",
@@ -12,5 +13,7 @@
   "who_is_it_for": "Who is this for?",
   "timeline_message": "What is your timeline",
   "cell_phone_message": "What is your cell phone number?",
-  "out_of_budget_message": "Out of my budget"
+  "out_of_budget_message": "Out of my budget",
+  "invalid_email_error_msg": "Please use a valid email address",
+  "invalid_phone_error_msg": "Sorry but that is an invalid phone number. Please check it is 10 digits long and does not contain letters or symbols."
 }
