@@ -11,6 +11,10 @@
 
 `pip3 install pytest-xdist`
 
+4. For nice reporting install allure:
+
+`pip3 install allure-pytest
+`
 4. For test reporting install pytest-html
 `pip3 install pytest-html
 `
@@ -23,9 +27,21 @@ From project root execute:
 To run i.e. 2 tests in parallel execute:
 `pytest -n 2 ui_tests/test_task1.py `
 
-To run tests in parallel and generate HTML report run:
+To run tests and generate allure report run:
 
-`pytest -n 2 ui_tests/test_task1.py --maxfail=2 --disable-warnings -q --tb=short --html=report.html`
+`pytest ui_tests/test_task1.py --alluredir=allure-results`
+
+Generate allure report: 
+
+` allure generate allure-results -o allure-report --clean`
+
+Serve results:
+
+`allure serve allure-results `
+
+Open allure report at: 
+
+`http://localhost:57914/index.html`
 
 To run tests with retries:
 

@@ -1,0 +1,21 @@
+[ {
+  "uid" : "9f65e5a608762ebf",
+  "name" : "test_pricing",
+  "time" : {
+    "start" : 1740172335688,
+    "stop" : 1740172357669,
+    "duration" : 21981
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ebbaa48c731f25e9",
+  "name" : "test_schedule_a_tour",
+  "time" : {
+    "start" : 1740172311683,
+    "stop" : 1740172333246,
+    "duration" : 21563
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

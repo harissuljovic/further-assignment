@@ -1,0 +1,47 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "ui_tests",
+    "children" : [ {
+      "name" : "test_task1",
+      "children" : [ {
+        "name" : "test_schedule_a_tour",
+        "uid" : "ebbaa48c731f25e9",
+        "parentUid" : "fe1d06348404c0abb4a41824ccf5d514",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740172311683,
+          "stop" : 1740172333246,
+          "duration" : 21563
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_pricing",
+        "uid" : "9f65e5a608762ebf",
+        "parentUid" : "fe1d06348404c0abb4a41824ccf5d514",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740172335688,
+          "stop" : 1740172357669,
+          "duration" : 21981
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fe1d06348404c0abb4a41824ccf5d514"
+    } ],
+    "uid" : "da04cf897e488fd811e7af6f6e9f869a"
+  } ]
+}

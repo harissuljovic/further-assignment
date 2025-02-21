@@ -1,0 +1,123 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "C02F806YMD6P",
+    "children" : [ {
+      "name" : "81270-MainThread",
+      "children" : [ {
+        "name" : "test_schedule_a_tour",
+        "uid" : "9b889ef0a2ff4b6a",
+        "parentUid" : "ed6787628267281f10594736eaccf481",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740172273009,
+          "stop" : 1740172293021,
+          "duration" : 20012
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_pricing",
+        "uid" : "9742ae8985122c6d",
+        "parentUid" : "ed6787628267281f10594736eaccf481",
+        "status" : "broken",
+        "time" : {
+          "start" : 1740172295105,
+          "stop" : 1740172302983,
+          "duration" : 7878
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ed6787628267281f10594736eaccf481"
+    }, {
+      "name" : "81125-MainThread",
+      "children" : [ {
+        "name" : "test_pricing",
+        "uid" : "1a9a0514afbc6b60",
+        "parentUid" : "656bab29d961fc8328dd4092889cc00d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1740172254684,
+          "stop" : 1740172262993,
+          "duration" : 8309
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_schedule_a_tour",
+        "uid" : "f931207b70591016",
+        "parentUid" : "656bab29d961fc8328dd4092889cc00d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740172230678,
+          "stop" : 1740172252454,
+          "duration" : 21776
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "656bab29d961fc8328dd4092889cc00d"
+    }, {
+      "name" : "81417-MainThread",
+      "children" : [ {
+        "name" : "test_schedule_a_tour",
+        "uid" : "ebbaa48c731f25e9",
+        "parentUid" : "b2e098696edda9e2a62ffb9883a94106",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740172311683,
+          "stop" : 1740172333246,
+          "duration" : 21563
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_pricing",
+        "uid" : "9f65e5a608762ebf",
+        "parentUid" : "b2e098696edda9e2a62ffb9883a94106",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740172335688,
+          "stop" : 1740172357669,
+          "duration" : 21981
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b2e098696edda9e2a62ffb9883a94106"
+    } ],
+    "uid" : "02e29306fa835c2eace2349f8149e037"
+  } ]
+}

@@ -1,0 +1,43 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "ui_tests.test_task1",
+    "children" : [ {
+      "name" : "test_schedule_a_tour",
+      "uid" : "ebbaa48c731f25e9",
+      "parentUid" : "3f943fa9d47702354d998bb505722715",
+      "status" : "passed",
+      "time" : {
+        "start" : 1740172311683,
+        "stop" : 1740172333246,
+        "duration" : 21563
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 2,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_pricing",
+      "uid" : "9f65e5a608762ebf",
+      "parentUid" : "3f943fa9d47702354d998bb505722715",
+      "status" : "passed",
+      "time" : {
+        "start" : 1740172335688,
+        "stop" : 1740172357669,
+        "duration" : 21981
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 2,
+      "retriesStatusChange" : true,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ui_tests.test_task1"
+  } ]
+}
