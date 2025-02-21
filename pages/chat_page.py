@@ -37,30 +37,42 @@ class ChatPage(BasePage):
         expect(self.page.locator(f'label:has-text("{label_text}")')).to_have_class('option-button primary selected')
 
     def select_date_and_time(self) -> str:
-        # Get tomorrow's date
-        tomorrow = datetime.now() + timedelta(days=1)
-        day_str = str(tomorrow.day)
+        offset = 1
+        selected_date = None
 
-        # Select the day
-        day_locator = self.page.locator(self.day_in_month, has_text=day_str)
-        day_locator.wait_for(state="visible", timeout=5000)
-        day_locator.click()
+        while True:
+            candidate_date = datetime.now() + timedelta(days=offset)
+            # Skip if candidate_date is Saturday (5) or Sunday (6) - weekends are disabled in date picker
+            if candidate_date.weekday() >= 5:
+                offset += 1
+                continue
 
-        # Wait for time slots
+            day_str = str(candidate_date.day)
+            day_locator = self.page.locator(self.day_in_month, has_text=day_str)
+            try:
+                # Wait for the day element to become visible
+                day_locator.wait_for(state="visible", timeout=5000)
+                day_locator.click()
+                selected_date = candidate_date
+                break  # Exit loop once a valid day is clicked
+            except Exception as e:
+                # If the day is not clickable try the next day
+                offset += 1
+
+        # Wait for time slots to appear
         self.page.wait_for_selector("div.time", state="visible", timeout=5000)
 
-        # Get all available time slots
+        # Get all available time slots and select the first one
         available_times = self.page.locator("div.time:not(.unavailable)")
-
         if available_times.count() == 0:
             raise ValueError("No available time slots found")
 
-        # Select the first available time slot
         first_available_time = available_times.first
         selected_time = first_available_time.inner_text()
         first_available_time.click()
 
-        selected_date_time = f"{tomorrow.strftime('%-m/%-d/%Y')} at {selected_time}"
+        # Format the selected date and time
+        selected_date_time = f"{selected_date.strftime('%-m/%-d/%Y')} at {selected_time}"
         return selected_date_time
 
     def click_next(self):

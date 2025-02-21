@@ -10,19 +10,22 @@ def page(request):
         context = browser.new_context(
             record_video_dir="videos/"
         )
+        # Set default timeout to 60 seconds
+        context.set_default_timeout(60000)
         page = context.new_page()
-
-        # Ensure video is saved after test completion or failure
-        def save_video_on_failure():
-            if request.node.rep_call.failed:
-                video_path = context.video().path()
-                print(f"Test failed, saving video: {video_path}")
-
-        request.addfinalizer(save_video_on_failure)
-
-        yield page
-        browser.close()
-
+        page.set_default_timeout(60000)
+        try:
+            yield page
+            # Test passed
+        finally:
+            # Test failed, save the video
+            if hasattr(request.node, "rep_call") and request.node.rep_call.failed:
+                try:
+                    video_path = page.video.path()
+                    print(f"Test failed, saving video: {video_path}")
+                except Exception as e:
+                    print(f"Error saving video: {e}")
+            browser.close()
 
 @pytest.fixture(scope="session")
 def test_data():
