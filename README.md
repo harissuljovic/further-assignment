@@ -18,14 +18,21 @@
 ### How to run Functional E2E Tests
 
 From project root execute:
-`pytest tests/test_task1.py`
+`pytest ui_tests/test_task1.py`
 
 To run i.e. 2 tests in parallel execute:
-`pytest -n 2 tests/test_task1.py `
+`pytest -n 2 ui_tests/test_task1.py `
 
 To run tests in parallel and generate HTML report run:
 
-`pytest -n 2 tests/test_task1.py --maxfail=2 --disable-warnings -q --tb=short --html=report.html`
+`pytest -n 2 ui_tests/test_task1.py --maxfail=2 --disable-warnings -q --tb=short --html=report.html`
 
 
+### How to run API tests
 
+From project root execute:
+
+`pytest --log-cli-level=INFO api_tests/test_task2.py
+`
+
+**IMPORTANT NOTE: The crud test will fail because fake rest api is not persisting data**
