@@ -27,7 +27,10 @@ To run tests in parallel and generate HTML report run:
 
 `pytest -n 2 ui_tests/test_task1.py --maxfail=2 --disable-warnings -q --tb=short --html=report.html`
 
+To run tests with retries:
 
+`pytest ui_tests/test_task1.py --maxfail=5 --reruns 3
+`
 ### How to run API tests
 
 From project root execute:
